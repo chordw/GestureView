@@ -1,0 +1,25 @@
+{
+  "app": {
+    "bundleName": "com.wx.harmony.gesture",
+    "vendor": "harmony",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+  },
+  "module": {
+    "package": "com.wx.harmony.gesture",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "gesture",
+      "moduleType": "har"
+    }
+  }
+}
