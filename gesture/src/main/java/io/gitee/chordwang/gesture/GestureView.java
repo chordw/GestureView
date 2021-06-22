@@ -1,4 +1,4 @@
-package com.wx.harmony.gesture;
+package io.gitee.chordwang.gesture;
 
 import ohos.agp.components.AttrSet;
 import ohos.agp.components.Component;
