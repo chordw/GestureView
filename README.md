@@ -2,6 +2,10 @@
 
 #### 介绍
 
+HamonyOS 下的手势控件。
+
+![Image text](https://gitee.com/chordwang/gesture-view/blob/master/image/WX20210622-164921@2x.png)
+
 
 #### 软件架构
 软件架构说明
