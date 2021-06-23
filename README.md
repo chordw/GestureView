@@ -2,6 +2,10 @@
 
 ![platform](https://img.shields.io/badge/platform-harmoyOS-black) ![](https://img.shields.io/badge/author-chordwang-brightgreen) ![](https://img.shields.io/badge/license-Apache--2.0-blue)
 
+**github地址**：<https://github.com/chordw/GestureView>
+
+**gitee地址**：<https://gitee.com/chordwang/gesture-view>
+
 #### 介绍
 
 HamonyOS 下的手势控件。
