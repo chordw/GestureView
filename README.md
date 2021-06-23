@@ -33,9 +33,9 @@ HamonyOS 下的手势控件。
 [详情参考demo](https://gitee.com/chordwang/gesture-view/blob/master/entry/src/main/java/com/harmony/gestureview/slice/MainAbilitySlice.java)
 
 #### Gradle
-**本项目已经上传mavenCentral。** ![](https://img.shields.io/badge/mavenCentral-GestureView-green)
+**本项目已经上传mavenCentral。** ![](https://img.shields.io/maven-central/v/io.gitee.chordwang/gestureview)
 ```
-implementation 'io.gitee.chordwang:gestureview:1.0.0'
+implementation 'io.gitee.chordwang:gestureview:1.0.0'//最新版本见上面
 ```
 工程根目录的build.gradle中添加如下：
 ```
