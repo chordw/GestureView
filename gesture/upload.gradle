@@ -6,7 +6,7 @@ Properties properties = new Properties()
 properties.load(project.file('./upload.properties').newDataInputStream())
 
 def DEFAULT_POM_NAME = 'gesture'
-def DEFAULT_POM_VERSION = '1.0.0'  //har包版本信息
+def DEFAULT_POM_VERSION = '1.0.1'  //har包版本信息
 def DEFAULT_POM_ARTIFACT_ID = "gestureview"  //har包ID
 def DEFAULT_POM_GROUP_ID = 'io.gitee.chordwang'  //项目组ID
 def DEFAULT_POM_PACKAGING = 'har'  //包类型，固定为har
@@ -61,6 +61,15 @@ afterEvaluate { project ->
                 //url = LOCAL_MAVEN_REPOSITORY_URL  //发布到本地Maven仓
                 //发布到远程Maven仓的地址以及Maven仓的帐号和密码
                 url = REMOTE_MAVEN_REPOSITORY_URL
+                tasks.each {
+                    if (it.name.contains('Local')){
+                        println("发布到本地Maven仓")
+                        url = LOCAL_MAVEN_REPOSITORY_URL
+                    }else {
+                        println("发布到远程Maven仓")
+                        url = REMOTE_MAVEN_REPOSITORY_URL
+                    }
+                }
                 credentials {
                     username = MAVEN_USERNAME
                     password = MAVEN_PASSWORD

@@ -1,16 +1,16 @@
 {
   "app": {
-    "bundleName": "com.wx.harmony.gesture",
+    "bundleName": "io.gitee.chordwang.gesture",
     "vendor": "harmony",
     "version": {
-      "code": 1000000,
-      "name": "1.0.0"
+      "code": 1000001,
+      "name": "1.0.1"
     }
   },
   "deviceConfig": {
   },
   "module": {
-    "package": "com.wx.harmony.gesture",
+    "package": "io.gitee.chordwang.gesture",
     "deviceType": [
       "phone",
       "tablet",
