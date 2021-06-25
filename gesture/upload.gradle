@@ -15,11 +15,11 @@ def MAVEN_USERNAME = properties.getProperty('MAVEN_USERNAME')  //远程Maven仓�
 def MAVEN_PASSWORD = properties.getProperty('MAVEN_PASSWORD')  //远程Maven仓的密码
 def LOCAL_MAVEN_REPOSITORY_URL = properties.getProperty('LOCAL_MAVEN_REPOSITORY_URL')//本地Maven仓地址
 def REMOTE_MAVEN_REPOSITORY_URL = properties.getProperty('REMOTE_MAVEN_REPOSITORY_URL')//远程Maven仓地址
-def PROJECT_URL=properties.getProperty("PROJECT_URL")
-def PROJECT_URL_GIT=properties.getProperty("PROJECT_URL_GIT")
-def MAVEN_ID=properties.getProperty("MAVEN_ID")
-def MAVEN_NAME=properties.getProperty("MAVEN_NAME")
-def MAVEN_EMAIL=properties.getProperty("MAVEN_EMAIL")
+def PROJECT_URL = properties.getProperty("PROJECT_URL")
+def PROJECT_URL_GIT = properties.getProperty("PROJECT_URL_GIT")
+def MAVEN_ID = properties.getProperty("MAVEN_ID")
+def MAVEN_NAME = properties.getProperty("MAVEN_NAME")
+def MAVEN_EMAIL = properties.getProperty("MAVEN_EMAIL")
 
 afterEvaluate { project ->
     publishing {
@@ -45,7 +45,7 @@ afterEvaluate { project ->
                         developer {
                             id = MAVEN_ID
                             name = MAVEN_NAME
-                            email =  MAVEN_EMAIL
+                            email = MAVEN_EMAIL
                         }
                     }
                     scm {
@@ -60,13 +60,11 @@ afterEvaluate { project ->
             maven {
                 //url = LOCAL_MAVEN_REPOSITORY_URL  //发布到本地Maven仓
                 //发布到远程Maven仓的地址以及Maven仓的帐号和密码
-                url = REMOTE_MAVEN_REPOSITORY_URL
+                url = LOCAL_MAVEN_REPOSITORY_URL
                 tasks.each {
-                    if (it.name.contains('Local')){
-                        println("发布到本地Maven仓")
+                    if (it.name.contains('Local')) {
                         url = LOCAL_MAVEN_REPOSITORY_URL
-                    }else {
-                        println("发布到远程Maven仓")
+                    } else {
                         url = REMOTE_MAVEN_REPOSITORY_URL
                     }
                 }
